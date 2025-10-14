@@ -105,6 +105,19 @@ const slides = [
       "Technical support: 'If you have any issues accessing the form, let me know immediately.'",
       "Completion check: 'Make sure to submit your answers before returning to this presentation for the review.'"
     ]
+  },
+  {
+    title: "Great Job! Ready for Advanced Topics",
+    layout: "bullets",
+    icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
+    bullets: [
+      "Congratulations: You've successfully completed the foundational training sections!",
+      "Knowledge Check: This quiz confirmed your understanding of core dispatching concepts",
+      "Next Phase: You're now ready to move on to advanced dispatching topics",
+      "Confidence Building: You have the foundation needed for professional success",
+      "Continuous Learning: Keep this foundational knowledge sharp as you advance"
+    ],
+    isMaterialsSlide: true
   }
 ];
 
