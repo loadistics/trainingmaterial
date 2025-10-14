@@ -171,7 +171,7 @@ const slides = [
     title: "Personal Office Guide Walkthrough",
     layout: "bullets",
     icon: <Icon.ListChecks className="w-12 h-12" style={{ color: brand.red }} />,
-    pdf: "/training-material/section20/pdfs/personal-office.pdf",
+    pdf: "/trainingmaterial/section20/pdfs/personal-office.pdf",
     bullets: [
       "Download Access: Personal Office guide available for immediate download and use",
       "Comprehensive Guide: Step-by-step instructions for setting up your record keeping system",

@@ -221,7 +221,7 @@ const slides = [
     title: "Complete Load Board Reference List",
     layout: "materials",
     icon: <Icon.BookOpen className="w-12 h-12" style={{ color: brand.red }} />,
-    pdf: "/training-material/section29/pdfs/Loadboardlist.pdf",
+    pdf: "/trainingmaterial/section29/pdfs/Loadboardlist.pdf",
     trainerNotes: [
       "This PDF contains a comprehensive list of all load boards discussed in this module.",
       "Includes free load boards, paid load boards, and major broker load boards.",

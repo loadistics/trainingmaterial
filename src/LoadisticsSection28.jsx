@@ -186,7 +186,7 @@ const slides = [
     title: "Load Board List Reference",
     layout: "materials",
     icon: <Icon.BookOpen className="w-12 h-12" style={{ color: brand.red }} />,
-    pdf: "/training-material/section29/pdfs/Loadboardlist.pdf",
+    pdf: "/trainingmaterial/section29/pdfs/Loadboardlist.pdf",
     trainerNotes: [
       "This PDF contains a comprehensive list of load boards available in the market.",
       "Each load board is categorized by type, cost, and features.",

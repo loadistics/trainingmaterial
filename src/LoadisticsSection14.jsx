@@ -311,7 +311,7 @@ const slides = [
       "Quality Standards: Clean, current, properly formatted documentation",
       "Submission Process: Organized email with clear subject line and attachments"
     ],
-    pdf: "/training-material/section14/pdfs/Sample+Carrier+Packet-2.pdf",
+    pdf: "/trainingmaterial/section14/pdfs/Sample+Carrier+Packet-2.pdf",
     trainerNotes: [
       "Show the PDF to demonstrate professional document package.",
       "Walk through each document explaining its purpose and importance.",

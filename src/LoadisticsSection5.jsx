@@ -58,7 +58,7 @@ const sectionMaterials = {
     {
       title: "Sample Carrier Documents (Full Package)",
       description: "Complete set of carrier documentation including insurance certificates, authority documents, safety ratings, and compliance materials.",
-      url: "/training-material/section5/pdfs/Sample+Carrier+Documents+(Full+Package)-1.pdf",
+      url: "/trainingmaterial/section5/pdfs/Sample+Carrier+Documents+(Full+Package)-1.pdf",
       filename: "Sample+Carrier+Documents+(Full+Package)-1.pdf"
     }
   ],

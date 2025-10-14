@@ -115,7 +115,7 @@ const slides = [
       "Equipment Type: Specified truck requirements and BOL number space",
       "Motor Carrier: Space for carrier name and dispatcher contact information"
     ],
-    pdf: "/training-material/section15/pdfs/Sample+Rate+Confirmation.pdf",
+    pdf: "/trainingmaterial/section15/pdfs/Sample+Rate+Confirmation.pdf",
     trainerNotes: [
       "Show the PDF and point out the header section at the top.",
       "Broker contact info is critical - save this for future communication.",

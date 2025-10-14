@@ -30,7 +30,7 @@ const slides = [
     sectionLabel: "Quiz Break #4",
     title: "🎯 Quiz Time! Sections 22-27 Recap",
     layout: "title",
-    quizImage: "/training-material/misc/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #4 covering Sections 22-27: Market Analysis, Strategic Load Selection, and Negotiation Skills.",
       "This quiz tests practical application of market analysis tools, strategic load selection approaches, and negotiation techniques.",

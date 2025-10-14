@@ -127,7 +127,7 @@ const slides = [
       "Components: Vehicle tracker + fleet software + mobile app.",
       "Requirement: Large commercial vehicles must have ELDs (compliance baseline)."
     ],
-    images: ["/training-material/section9/images/ELD.png"],
+    images: ["/trainingmaterial/section9/images/ELD.png"],
     trainerNotes: [
       "ELD records movement and hours automatically: driving, on-duty, location pings. If the carrier grants access, we can monitor and forecast ETA from here.",
       "On screen: ELD_Dashboard.png shows what the data looks like in practice.",
@@ -170,7 +170,7 @@ const slides = [
       "Process: Broker requests tracking; driver gets link or app request; GPS shares location for a set period.",
       "Consent: Confirm driver agrees before enabling tracking; clarify duration and privacy."
     ],
-    images: ["/training-material/section9/images/Macropoint.png"],
+    images: ["/trainingmaterial/section9/images/Macropoint.png"],
     trainerNotes: [
       "Broker sends a link or app request. Driver opts in to share GPS for a defined window. We confirm consent and duration up front.",
       "On screen: MacroPoint_Link_SMS.png and MacroPoint_Tracking_Map.png.",

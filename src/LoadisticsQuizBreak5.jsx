@@ -30,7 +30,7 @@ const slides = [
     title: "🎯 Quiz Time! Sections 28-30 Recap",
     layout: "title",
     icon: "🎯",
-    quizImage: "/training-material/quiz-break/images/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/quiz-break/images/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #5 - Loadboards and Broker Relationships Recap.",
       "This quiz covers Sections 28-30: Loadboards Overview Parts 1 & 2, and Building Relationships with Brokers.",

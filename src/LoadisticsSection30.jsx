@@ -97,7 +97,7 @@ const slides = [
     ],
     images: [
       {
-        src: "/training-material/section30/images/carrier.png",
+        src: "/trainingmaterial/section30/images/carrier.png",
         alt: "Carrier and Broker Relationship",
         caption: "The partnership between carriers and brokers is built on trust and communication"
       }
@@ -212,7 +212,7 @@ const slides = [
     ],
     images: [
       {
-        src: "/training-material/section30/images/email-message-example.png",
+        src: "/trainingmaterial/section30/images/email-message-example.png",
         alt: "Thank You Email Example",
         caption: "Example of a professional thank you email to brokers after delivery"
       }
@@ -273,7 +273,7 @@ const slides = [
     ],
     images: [
       {
-        src: "/training-material/section30/images/broker+hand+in+dispatcher+hand.jpg",
+        src: "/trainingmaterial/section30/images/broker+hand+in+dispatcher+hand.jpg",
         alt: "Broker and Dispatcher Handshake",
         caption: "The successful partnership between brokers and dispatchers built on trust and mutual respect"
       }

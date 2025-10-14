@@ -434,7 +434,7 @@ function runUnitTests() {
 // ===== Main App =====
 export default function LoadisticsSection26({ onNavigateToSection, sectionDropdown }) {
   const [slideIndex, setSlideIndex] = useState(0);
-    const [showConfetti, setShowConfetti] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [dims, setDims] = useState({ width: 0, height: 0 });
 

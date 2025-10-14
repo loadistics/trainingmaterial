@@ -30,7 +30,7 @@ const slides = [
     sectionLabel: "Quiz Break #3",
     title: "🎯 Quiz Time! Sections 20-21 Recap",
     layout: "title",
-    quizImage: "/training-material/misc/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #3 covering Sections 20-21: ELD Mandate and Hours of Service regulations.",
       "This quiz tests understanding of HOS rules, compliance requirements, and practical application scenarios.",

@@ -109,7 +109,7 @@ const slides = [
     title: "Sample Rate Confirmation Analysis",
     layout: "bullets",
     icon: <Icon.BookOpen className="w-12 h-12" style={{ color: brand.red }} />,
-    pdf: "/training-material/section17/pdfs/Sample+Rate+Con+for+Invoice-1.pdf",
+    pdf: "/trainingmaterial/section17/pdfs/Sample+Rate+Con+for+Invoice-1.pdf",
     bullets: [
       "Header Information: Three Rivers Logistics contact details and load number 218142",
       "Route Details: Elizabeth, New Jersey to Bolingbrook, Illinois",
@@ -190,7 +190,7 @@ const slides = [
     title: "Invoice Template and Spreadsheet",
     layout: "bullets",
     icon: <Icon.ListChecks className="w-12 h-12" style={{ color: brand.red }} />,
-    pdf: "/training-material/section17/pdfs/Invoice-spreadsheet.pdf",
+    pdf: "/trainingmaterial/section17/pdfs/Invoice-spreadsheet.pdf",
     bullets: [
       "Professional Template: Clean, simple invoice format that works with any carrier",
       "Automated Calculations: Built-in formulas calculate totals automatically",
@@ -211,7 +211,7 @@ const slides = [
     title: "Understanding Voided Checks for Direct Deposit",
     layout: "bullets",
     icon: <Icon.Truck className="w-12 h-12" style={{ color: brand.red }} />,
-    images: ["/training-material/section17/images/Sample+Void+Check.jpg"],
+    images: ["/trainingmaterial/section17/images/Sample+Void+Check.jpg"],
     bullets: [
       "Purpose: Contains all banking information needed for direct deposit setup",
       "Routing Number: Bank's unique identifier (bottom left - 9 digits)",

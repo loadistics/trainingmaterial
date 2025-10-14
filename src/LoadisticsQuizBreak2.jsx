@@ -32,7 +32,7 @@ const slides = [
     layout: "title",
     icon: <span className="text-4xl">🎯</span>,
     sectionLabel: "Quiz Break #2",
-    quizImage: "/training-material/misc/QUIZTIME.jpeg"
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg"
   },
   {
     title: "Quiz Instructions",

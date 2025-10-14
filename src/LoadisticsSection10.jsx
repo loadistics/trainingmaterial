@@ -128,7 +128,7 @@ const slides = [
       "Roles: Receipt of freight services; Contract between carrier and shipper; Document of title.",
       "Use: Provides shipment details and supports invoicing once signed at delivery."
     ],
-    images: ["/training-material/section10/images/BOL.jpg"],
+    images: ["/trainingmaterial/section10/images/BOL.jpg"],
     trainerNotes: [
       "The BOL is three things at once: a receipt of the service, a contract between shipper and carrier, and a document of title. Here's a sample on screen so you recognize the layout.",
       "Everything we invoice later leans on this document."

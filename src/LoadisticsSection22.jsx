@@ -104,7 +104,7 @@ const slides = [
         ["Return Requirement", "Back to Chicago next Monday"]
       ]
     },
-    images: ["/training-material/section22/images/sampleweeklyplan.png"],
+    images: ["/trainingmaterial/section22/images/sampleweeklyplan.png"],
     trainerNotes: [
       "Explain the planning process: 'Based on these parameters provided to you by the carrier, at the beginning of the week, a dispatcher sets himself a weekly task for each truck.'",
       "Planning format: 'This task should be quite simple and clear, so you can look at it quickly and refresh your memory when you switch from one truck to another.'",
@@ -147,7 +147,7 @@ const slides = [
         ["Inland Ports", "Stockton CA, Inland Empire CA, Fort Worth TX, Memphis TN, Saint Louis MO, Kansas City KS, Chicago IL, Columbus OH, Charlotte NC, Atlanta GA"]
       ]
     },
-    images: ["/training-material/section22/images/key-international-ports.png", "/training-material/section22/images/inland-ports.png"],
+    images: ["/trainingmaterial/section22/images/key-international-ports.png", "/trainingmaterial/section22/images/inland-ports.png"],
     trainerNotes: [
       "Transportation hubs definition: 'These are the junctions of several modes of transportation, such as air, rail and so on, working together to serve, transit, local and urban traffic.'",
       "Logistic centers: 'Major logistic centers, which include the highest number of distribution facilities.'",
@@ -170,7 +170,7 @@ const slides = [
       "Simplifies geographic targeting when posting trucks",
       "Essential reference tool for dispatchers"
     ],
-    pdf: "/training-material/section22/pdfs/Zip+Zone+Directory-2.pdf",
+    pdf: "/trainingmaterial/section22/pdfs/Zip+Zone+Directory-2.pdf",
     trainerNotes: [
       "Zip zone explanation: 'The United States can also be divided into smaller zip zones. A zip code is a five digit postal code. Each city and town has its own zip code, and the first digit of that zip code is responsible for a wide area that may include several states or parts of states at once.'",
       "Practical usage: 'When searching for a load or posting a truck on a load board, you can designate a movement zone using one of the ten zip zones instead of having to write out each individual state.'",
