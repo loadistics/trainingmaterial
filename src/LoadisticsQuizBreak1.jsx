@@ -58,7 +58,7 @@ const slides = [
     title: "🎯 Quiz Time! Sections 1-5 Recap",
     layout: "title",
     icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
-    quizImage: "/training-material/misc/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Congratulations! Students have completed Sections 1-5 and it's time to test their knowledge.",
       "This quiz covers all the foundational material: dispatcher roles, industry players, equipment types, and documentation.",
@@ -90,7 +90,7 @@ const slides = [
     title: "Let's Take the Quiz!",
     layout: "quiz-link",
     icon: <Icon.ExternalLink className="w-12 h-12" style={{ color: brand.red }} />,
-    quizImage: "/training-material/misc/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
     quizLink: "https://forms.gle/7fdDJfdxRu1ix2C26",
     bullets: [
       "Click the button below to access the Google Forms quiz",

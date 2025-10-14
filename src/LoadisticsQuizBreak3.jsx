@@ -40,7 +40,7 @@ const slides = [
     sectionLabel: "Quiz Break #3",
     title: "🎯 Quiz Time! Sections 20-21 Recap",
     layout: "title",
-    quizImage: "/training-material/misc/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #3 covering Sections 20-21: ELD Mandate and Hours of Service regulations.",
       "This quiz tests understanding of HOS rules, compliance requirements, and practical application scenarios.",
@@ -64,28 +64,6 @@ const slides = [
     layout: "quiz-link",
     icon: <span className="text-3xl">🔗</span>,
     quizLink: "https://forms.gle/25hYibeyrGnUL1ju5"
-  },
-  {
-    title: "Answer Key (Trainer Only)",
-    layout: "answer-key",
-    icon: <span className="text-3xl">🔑</span>,
-    answerKey: [
-      {
-        question: "How many hours of driving are allowed within the 14-hour work window?",
-        answer: "11 hours",
-        explanation: "Drivers are allowed a maximum of 11 hours of driving within a 14-hour work window, after which they must take a 10-hour break."
-      },
-      {
-        question: "A work limit can be based on a 7-day or 8-day work week. How many hours of work are given to the driver in each option?",
-        answer: "60 hours in 7 days or 70 hours in 8 days",
-        explanation: "The 7-day work week allows 60 hours of work, while the 8-day work week allows 70 hours of work before requiring a 34-hour reset."
-      },
-      {
-        question: "Your driver's work hours started at 9:00 am. He spent 4 hours loading and started driving at 1:00 pm. He drove continuously for 5.5 hours, then took a 30-minute break for dinner and started driving again at 7:00 pm. How many hours of continuous driving time does the driver have left before he has to take a 10-hour break?",
-        answer: "4 hours",
-        explanation: "During the working hours, the driver drove only 5.5 hours, so he has another 5.5 hours allowed for driving. However, the driver started work at 9 am, so his 14-hour work window ends at 11 pm. After leaving at 7pm, the driver has 5.5 hours of driving time left, but only 4 working hours, so he can only drive 4 hours before taking a 10-hour break."
-      }
-    ]
   },
   {
     title: "Quiz Complete!",

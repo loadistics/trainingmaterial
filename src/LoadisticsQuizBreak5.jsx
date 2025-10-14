@@ -40,7 +40,7 @@ const slides = [
     title: "🎯 Quiz Time! Sections 28-30 Recap",
     layout: "title",
     icon: "🎯",
-    quizImage: "/training-material/quiz-break/images/QUIZTIME.jpeg",
+    quizImage: "/trainingmaterial/quiz-break/images/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #5 - Loadboards and Broker Relationships Recap.",
       "This quiz covers Sections 28-30: Loadboards Overview Parts 1 & 2, and Building Relationships with Brokers.",
@@ -98,25 +98,6 @@ const slides = [
       "Monitor their progress and be available for questions.",
       "The quiz includes practical load board exercises and broker contact collection.",
       "This is a hands-on assessment of their load board and relationship building skills."
-    ]
-  },
-  {
-    title: "Answer Key for Trainers",
-    layout: "answer-key",
-    icon: "🔑",
-    answerKey: [
-      "Assignment 1: Students should access DOT, 123 Load Board, or DAT Load Board as covered in Sections 28-29",
-      "Assignment 2: Load search should include Atlanta, GA as origin with 100-mile radius for deadhead",
-      "Assignment 3: 1-day Dry Van load examples: Atlanta to Birmingham, Nashville, or Charlotte",
-      "Assignment 4: 2-day Dry Van load examples: Atlanta to Dallas, Chicago, or New York",
-      "Assignment 5: Broker list should include 15 different companies with complete contact information",
-      "Key Market Areas near Atlanta: Birmingham, Nashville, Charlotte, Jacksonville, Savannah"
-    ],
-    trainerNotes: [
-      "Use this answer key to help students who are struggling with the assignments.",
-      "Emphasize that there are multiple correct answers for load options.",
-      "The broker list should be diverse and include various types of freight brokers.",
-      "Key Market Areas are major cities that offer good freight opportunities."
     ]
   }
 ];
