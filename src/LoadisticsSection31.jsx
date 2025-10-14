@@ -168,7 +168,7 @@ const slides = [
     layout: "bullets",
     icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/fivewhys.png",
+      src: "/trainingmaterial/section31/images/fivewhys.png",
       alt: "Five Whys Method - ask the question 'why' up to five times to get to the real root of the problem",
       caption: "The Five Whys Method - A systematic approach to root cause analysis"
     },
@@ -192,7 +192,7 @@ const slides = [
     layout: "bullets",
     icon: <Icon.Users className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/pareto-principle.png",
+      src: "/trainingmaterial/section31/images/pareto-principle.png",
       alt: "Pareto Principle visualization showing 80/20 distribution",
       caption: "The Pareto Principle - 80% of effects come from 20% of causes"
     },
@@ -257,7 +257,7 @@ const slides = [
     layout: "bullets",
     icon: <Icon.ListChecks className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/brainstorm.png",
+      src: "/trainingmaterial/section31/images/brainstorm.png",
       alt: "Brainstorming concept with lightbulb, multiple hands pointing, and idea generation elements",
       caption: "Brainstorming - Generate maximum ideas without immediate evaluation"
     },
@@ -282,7 +282,7 @@ const slides = [
     layout: "bullets",
     icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/mindmap.png",
+      src: "/trainingmaterial/section31/images/mindmap.png",
       alt: "Mind map template with central topic, subtopics, and related ideas branching out",
       caption: "Mind Maps - Visual representation of interconnected ideas and solutions"
     },
@@ -308,7 +308,7 @@ const slides = [
     layout: "bullets",
     icon: <Icon.ListChecks className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/decisiontree.png",
+      src: "/trainingmaterial/section31/images/decisiontree.png",
       alt: "Decision Tree diagram showing root node, decision nodes, and leaf nodes with branching structure",
       caption: "Decision Tree Structure - Visualizing sequential choices and outcomes"
     },
@@ -356,7 +356,7 @@ const slides = [
     layout: "table",
     icon: <Icon.Users className="w-12 h-12" style={{ color: brand.red }} />,
     image: {
-      src: "/training-material/section31/images/5-key-question-method.png",
+      src: "/trainingmaterial/section31/images/5-key-question-method.png",
       alt: "5 Key Question Method showing the four main questions for decision making",
       caption: "The 5 Key Question Method - A systematic approach to evaluating solutions"
     },
