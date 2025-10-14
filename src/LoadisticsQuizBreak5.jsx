@@ -18,17 +18,7 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-function Switch({ checked, onCheckedChange }) {
-  return (
-    <label className="inline-flex items-center cursor-pointer select-none">
-      <span className="relative">
-        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
-        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
-        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
-      </span>
-    </label>
-  );
-}
+
 
 // ===== Brand palette =====
 const brand = { red: "#C8102E", black: "#0F1115", gray: "#4A4A4A", lightGray: "#F3F4F6" };
@@ -124,7 +114,7 @@ const slides = [
 // ===== Main App =====
 export default function LoadisticsQuizBreak5({ onNavigateToSection, sectionDropdown }) {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [trainerMode, setTrainerMode] = useState(false);
+  
   const [showConfetti, setShowConfetti] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [dims, setDims] = useState({ width: 0, height: 0 });
@@ -184,10 +174,7 @@ export default function LoadisticsQuizBreak5({ onNavigateToSection, sectionDropd
             {/* Section Navigation Dropdown */}
             {sectionDropdown}
             
-            <label className="text-sm flex items-center gap-2">
-              <Switch checked={trainerMode} onCheckedChange={setTrainerMode} />
-              <span className="font-medium">Trainer Mode</span>
-            </label>
+            
             {/* Logo */}
             <div className="hidden md:block">
               <img src={loadisticsLogo} alt="Loadistics Logo" className="h-12 opacity-80" />
@@ -294,16 +281,7 @@ export default function LoadisticsQuizBreak5({ onNavigateToSection, sectionDropd
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
-                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
-                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
-                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
-                      {slide.trainerNotes.map((note, i) => (
-                        <li key={i}>{note}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">

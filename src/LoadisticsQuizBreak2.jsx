@@ -19,17 +19,7 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-function Switch({ checked, onCheckedChange }) {
-  return (
-    <label className="inline-flex items-center cursor-pointer select-none">
-      <span className="relative">
-        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
-        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
-        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
-      </span>
-    </label>
-  );
-}
+
 
 const brand = {
   red: "#C8102E",
@@ -93,7 +83,7 @@ const slides = [
 
 export default function LoadisticsQuizBreak2({ onNavigateToSection }) {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [trainerMode, setTrainerMode] = useState(false);
+  
   const [showConfetti, setShowConfetti] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
