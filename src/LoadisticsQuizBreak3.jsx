@@ -56,16 +56,6 @@ const slides = [
     quizLink: "https://forms.gle/25hYibeyrGnUL1ju5"
   },
   {
-    title: "Answer Key (Trainer Only)",
-    layout: "answer-key",
-    icon: <span className="text-3xl">🔑</span>,
-    answerKey: [
-      {
-        question: "How many hours of driving are allowed within the 14-hour work window?",
-        answer: "11 hours",
-        explanation: "Drivers are allowed a maximum of 11 hours of driving within a 14-hour work window, after which they must take a 10-hour break."
-      },
-      {
         question: "A work limit can be based on a 7-day or 8-day work week. How many hours of work are given to the driver in each option?",
         answer: "60 hours in 7 days or 70 hours in 8 days",
         explanation: "The 7-day work week allows 60 hours of work, while the 8-day work week allows 70 hours of work before requiring a 34-hour reset."

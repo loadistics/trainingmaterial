@@ -52,16 +52,6 @@ const slides = [
     quizLink: "https://forms.gle/gMUa2ag1Uc4ZmbJk6"
   },
   {
-    title: "Answer Key (Trainer Only)",
-    layout: "answer-key",
-    icon: <span className="text-3xl">🔑</span>,
-    answerKey: [
-      {
-        question: "Your truck with a reefer trailer is expected to unload on Thursday in Atlanta, Georgia. The driver needs to be back home in Nashville, Tennessee by Friday. The minimum weekly income target for this truck is $8,000 a week. As of Thursday, the result is $6800. Calculate the Rate per Mile you need to ask for on this load to meet the minimum weekly target. Load Details: Atlanta GA - Nashville TN, 43,000 lbs fresh watermelon, Temp: 45F, 250 total miles",
-        answer: "$4.8",
-        explanation: "9000 - 7800 = $1200 left to meet the target. $1200 / 250 miles = $4.8"
-      },
-      {
         question: "Using the data provided, derive the Total Mileage of the given load. Load Details: Load Weight: 30,000 lbs, Commodity: frozen chicken, Rate: $2800, Rate per Mile: $3.2",
         answer: "875 miles",
         explanation: "$2800 / $3.2 per mile = 875 miles"
