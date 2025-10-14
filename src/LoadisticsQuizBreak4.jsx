@@ -258,14 +258,7 @@ export default function LoadisticsQuizBreak4({ onNavigateToSection, sectionDropd
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
-                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
-                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
-                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
-                      {slide.trainerNotes.map((note, i) => (<li key={i}>{note}</li>))}
-                    </ul>
-                  </div>
-                )}
+                
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">

@@ -136,11 +136,6 @@ export default function LoadisticsQuizBreak2({ onNavigateToSection }) {
                 </Button>
               </div>
               
-              {/* Trainer mode toggle */}
-              <label className="flex items-center gap-2 text-sm">
-                <Switch checked={trainerMode} onCheckedChange={setTrainerMode} />
-                <span className="font-medium">Trainer Mode</span>
-              </label>
               
               {/* Logo */}
               <div className="hidden md:block">
@@ -226,37 +221,6 @@ export default function LoadisticsQuizBreak2({ onNavigateToSection }) {
                   </div>
                 )}
 
-                {slide.layout === "answer-key" && trainerMode && slide.answerKey && (
-                  <div className="space-y-6">
-                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                      <h3 className="font-semibold text-yellow-800 mb-2">⚠️ Trainer Notes</h3>
-                      <p className="text-yellow-700">These answers are only visible in Trainer Mode</p>
-                    </div>
-                    {slide.answerKey.map((item, index) => (
-                      <div key={index} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                        <h4 className="font-semibold text-gray-900 mb-3">Question {index + 1}:</h4>
-                        <p className="text-gray-700 mb-4 text-sm">{item.question}</p>
-                        <div className="bg-green-50 border border-green-200 rounded p-4">
-                          <p className="font-semibold text-green-800 mb-2">Answer:</p>
-                          <p className="text-green-700 font-bold text-lg">{item.answer}</p>
-                        </div>
-                        <div className="bg-blue-50 border border-blue-200 rounded p-4 mt-3">
-                          <p className="font-semibold text-blue-800 mb-2">Explanation:</p>
-                          <p className="text-blue-700">{item.explanation}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {slide.layout === "answer-key" && !trainerMode && (
-                  <div className="text-center py-8">
-                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-800 mb-2">🔒 Answer Key Hidden</h3>
-                      <p className="text-gray-600">Enable Trainer Mode to view the answer key</p>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Section Navigation - show on first and last slides */}

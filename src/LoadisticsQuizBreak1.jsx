@@ -320,33 +320,6 @@ export default function LoadisticsQuizBreak1({ onNavigateToSection, sectionDropd
                       {slide.bullets.map((t, i) => (<li key={i} className="mb-3"><EmphasisText text={t} /></li>))}
                     </ul>
 
-                    {/* Answer Key - Only visible in trainer mode */}
-                    {trainerMode && slide.answerKey && (
-                      <div className="mt-8 p-6 bg-amber-50 border border-amber-200 rounded-xl">
-                        <h3 className="text-xl font-bold mb-4 text-amber-800">📋 Complete Answer Key (Trainer Only)</h3>
-                        <div className="space-y-6">
-                          {slide.answerKey.map((item, index) => (
-                            <div key={index} className="bg-white p-4 rounded-lg border border-amber-100">
-                              <h4 className="font-semibold text-gray-900 mb-2">{item.question}</h4>
-                              <div className="text-sm text-gray-600 mb-2">
-                                <strong>Options:</strong>
-                                <ul className="list-disc pl-5 mt-1">
-                                  {item.options.map((option, optIndex) => (
-                                    <li key={optIndex}>{option}</li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div className="text-sm mb-2">
-                                <strong className="text-green-700">Correct Answer:</strong> <span className="text-green-800 font-medium">{item.correctAnswer}</span>
-                              </div>
-                              <div className="text-sm">
-                                <strong className="text-blue-700">Explanation:</strong> <span className="text-blue-800">{item.explanation}</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </div>
                 )}
 
@@ -369,15 +342,6 @@ export default function LoadisticsQuizBreak1({ onNavigateToSection, sectionDropd
                   </div>
                 )}
 
-                {/* Trainer-facing panels when Trainer Mode is ON */}
-                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
-                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
-                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
-                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
-                      {slide.trainerNotes.map((n, i) => (<li key={i}>{n}</li>))}
-                    </ul>
-                  </div>
-                )}
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">
