@@ -19,7 +19,17 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-
+function Switch({ checked, onCheckedChange }) {
+  return (
+    <label className="inline-flex items-center cursor-pointer select-none">
+      <span className="relative">
+        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
+        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
+        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
+      </span>
+    </label>
+  );
+}
 
 // ===== Brand palette =====
 const brand = { red: "#C8102E", black: "#0F1115", gray: "#4A4A4A", lightGray: "#F3F4F6" };
@@ -30,7 +40,7 @@ const slides = [
     sectionLabel: "Quiz Break #3",
     title: "🎯 Quiz Time! Sections 20-21 Recap",
     layout: "title",
-    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
+    quizImage: "/training-material/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #3 covering Sections 20-21: ELD Mandate and Hours of Service regulations.",
       "This quiz tests understanding of HOS rules, compliance requirements, and practical application scenarios.",
@@ -56,6 +66,16 @@ const slides = [
     quizLink: "https://forms.gle/25hYibeyrGnUL1ju5"
   },
   {
+    title: "Answer Key (Trainer Only)",
+    layout: "answer-key",
+    icon: <span className="text-3xl">🔑</span>,
+    answerKey: [
+      {
+        question: "How many hours of driving are allowed within the 14-hour work window?",
+        answer: "11 hours",
+        explanation: "Drivers are allowed a maximum of 11 hours of driving within a 14-hour work window, after which they must take a 10-hour break."
+      },
+      {
         question: "A work limit can be based on a 7-day or 8-day work week. How many hours of work are given to the driver in each option?",
         answer: "60 hours in 7 days or 70 hours in 8 days",
         explanation: "The 7-day work week allows 60 hours of work, while the 8-day work week allows 70 hours of work before requiring a 34-hour reset."
@@ -259,7 +279,14 @@ export default function LoadisticsQuizBreak3({ onNavigateToSection, sectionDropd
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                
+                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
+                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
+                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
+                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
+                      {slide.trainerNotes.map((note, i) => (<li key={i}>{note}</li>))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">

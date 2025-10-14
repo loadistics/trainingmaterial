@@ -19,7 +19,17 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-
+function Switch({ checked, onCheckedChange }) {
+  return (
+    <label className="inline-flex items-center cursor-pointer select-none">
+      <span className="relative">
+        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
+        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
+        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
+      </span>
+    </label>
+  );
+}
 
 // ===== Brand palette =====
 const brand = { red: "#C8102E", black: "#0F1115", gray: "#4A4A4A", lightGray: "#F3F4F6" };
@@ -30,7 +40,7 @@ const slides = [
     sectionLabel: "Quiz Break #4",
     title: "🎯 Quiz Time! Sections 22-27 Recap",
     layout: "title",
-    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
+    quizImage: "/training-material/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #4 covering Sections 22-27: Market Analysis, Strategic Load Selection, and Negotiation Skills.",
       "This quiz tests practical application of market analysis tools, strategic load selection approaches, and negotiation techniques.",
@@ -66,24 +76,6 @@ const slides = [
       "Support: Be available to answer questions about navigation or technical issues.",
       "Monitoring: Walk around to ensure students are progressing through the quiz appropriately."
     ]
-  },
-  {
-    title: "Quiz Complete!",
-    layout: "bullets",
-    bullets: [
-      "Great job completing Quiz Break #4!",
-      "You've demonstrated understanding of market analysis tools and strategic load selection",
-      "These concepts are essential for professional dispatching success",
-      "Continue to the next section to build on these skills",
-      "Remember: Strategic thinking and market knowledge drive profitability"
-    ],
-    trainerNotes: [
-      "Completion celebration: Acknowledge students' completion of the quiz and their growing understanding of advanced dispatching concepts.",
-      "Skill reinforcement: Emphasize how these market analysis and strategic selection skills directly impact profitability and success.",
-      "Next steps: Preview that upcoming sections will continue building on these advanced concepts.",
-      "Professional development: Remind students that these skills differentiate professional dispatchers from beginners."
-    ],
-    isMaterialsSlide: true
   }
 ];
 
@@ -266,7 +258,14 @@ export default function LoadisticsQuizBreak4({ onNavigateToSection, sectionDropd
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                
+                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
+                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
+                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
+                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
+                      {slide.trainerNotes.map((note, i) => (<li key={i}>{note}</li>))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">

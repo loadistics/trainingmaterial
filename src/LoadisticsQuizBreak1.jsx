@@ -17,7 +17,17 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-
+function Switch({ checked, onCheckedChange }) {
+  return (
+    <label className="inline-flex items-center cursor-pointer select-none">
+      <span className="relative">
+        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
+        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
+        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
+      </span>
+    </label>
+  );
+}
 
 // ===== Inline icons (simple SVG) =====
 const Icon = {
@@ -48,7 +58,7 @@ const slides = [
     title: "🎯 Quiz Time! Sections 1-5 Recap",
     layout: "title",
     icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
-    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
+    quizImage: "/training-material/misc/QUIZTIME.jpeg",
     trainerNotes: [
       "Congratulations! Students have completed Sections 1-5 and it's time to test their knowledge.",
       "This quiz covers all the foundational material: dispatcher roles, industry players, equipment types, and documentation.",
@@ -80,7 +90,7 @@ const slides = [
     title: "Let's Take the Quiz!",
     layout: "quiz-link",
     icon: <Icon.ExternalLink className="w-12 h-12" style={{ color: brand.red }} />,
-    quizImage: "/trainingmaterial/misc/QUIZTIME.jpeg",
+    quizImage: "/training-material/misc/QUIZTIME.jpeg",
     quizLink: "https://forms.gle/7fdDJfdxRu1ix2C26",
     bullets: [
       "Click the button below to access the Google Forms quiz",
@@ -95,26 +105,6 @@ const slides = [
       "Technical support: 'If you have any issues accessing the form, let me know immediately.'",
       "Completion check: 'Make sure to submit your answers before returning to this presentation for the review.'"
     ]
-  },
-  {
-    title: "Great Job! Ready for Advanced Topics",
-    layout: "bullets",
-    icon: <Icon.CheckCircle className="w-12 h-12" style={{ color: brand.red }} />,
-    bullets: [
-      "Congratulations: You've successfully completed the foundational training sections!",
-      "Knowledge Check: This quiz confirmed your understanding of core dispatching concepts",
-      "Next Phase: You're now ready to move on to advanced dispatching topics",
-      "Confidence Building: You have the foundation needed for professional success",
-      "Continuous Learning: Keep this foundational knowledge sharp as you advance"
-    ],
-    trainerNotes: [
-      "Celebrate progress: 'Congratulations! You've completed the foundational sections and demonstrated your knowledge.'",
-      "Reinforce confidence: 'This quiz shows you understand the core concepts needed for professional dispatching.'",
-      "Preview next phase: 'Now we move into advanced topics that will make you a true dispatching professional.'",
-      "Encourage questions: 'Before we continue, are there any concepts from Sections 1-5 you'd like to review?'",
-      "Set expectations: 'The advanced sections build on this foundation, so you're well-prepared for what's coming next.'"
-    ],
-    isMaterialsSlide: true
   }
 ];
 
@@ -367,7 +357,14 @@ export default function LoadisticsQuizBreak1({ onNavigateToSection, sectionDropd
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                
+                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
+                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
+                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
+                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
+                      {slide.trainerNotes.map((n, i) => (<li key={i}>{n}</li>))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">

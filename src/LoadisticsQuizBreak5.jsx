@@ -18,7 +18,17 @@ function Card({ children, className = "", style }) {
 function CardContent({ children, className = "" }) {
   return <div className={`p-6 md:p-10 ${className}`}>{children}</div>;
 }
-
+function Switch({ checked, onCheckedChange }) {
+  return (
+    <label className="inline-flex items-center cursor-pointer select-none">
+      <span className="relative">
+        <input type="checkbox" className="sr-only" checked={checked} onChange={e => onCheckedChange?.(e.target.checked)} />
+        <span className={`block h-6 w-10 rounded-full transition ${checked ? "bg-[#C8102E]" : "bg-gray-300"}`}></span>
+        <span className={`dot absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition ${checked ? "translate-x-4" : ""}`}></span>
+      </span>
+    </label>
+  );
+}
 
 // ===== Brand palette =====
 const brand = { red: "#C8102E", black: "#0F1115", gray: "#4A4A4A", lightGray: "#F3F4F6" };
@@ -30,7 +40,7 @@ const slides = [
     title: "🎯 Quiz Time! Sections 28-30 Recap",
     layout: "title",
     icon: "🎯",
-    quizImage: "/trainingmaterial/quiz-break/images/QUIZTIME.jpeg",
+    quizImage: "/training-material/quiz-break/images/QUIZTIME.jpeg",
     trainerNotes: [
       "Welcome to Quiz Break #5 - Loadboards and Broker Relationships Recap.",
       "This quiz covers Sections 28-30: Loadboards Overview Parts 1 & 2, and Building Relationships with Brokers.",
@@ -90,7 +100,73 @@ const slides = [
       "This is a hands-on assessment of their load board and relationship building skills."
     ]
   },
-  {mounted && showConfetti && (
+  {
+    title: "Answer Key for Trainers",
+    layout: "answer-key",
+    icon: "🔑",
+    answerKey: [
+      "Assignment 1: Students should access DOT, 123 Load Board, or DAT Load Board as covered in Sections 28-29",
+      "Assignment 2: Load search should include Atlanta, GA as origin with 100-mile radius for deadhead",
+      "Assignment 3: 1-day Dry Van load examples: Atlanta to Birmingham, Nashville, or Charlotte",
+      "Assignment 4: 2-day Dry Van load examples: Atlanta to Dallas, Chicago, or New York",
+      "Assignment 5: Broker list should include 15 different companies with complete contact information",
+      "Key Market Areas near Atlanta: Birmingham, Nashville, Charlotte, Jacksonville, Savannah"
+    ],
+    trainerNotes: [
+      "Use this answer key to help students who are struggling with the assignments.",
+      "Emphasize that there are multiple correct answers for load options.",
+      "The broker list should be diverse and include various types of freight brokers.",
+      "Key Market Areas are major cities that offer good freight opportunities."
+    ]
+  }
+];
+
+// ===== Main App =====
+export default function LoadisticsQuizBreak5({ onNavigateToSection, sectionDropdown }) {
+  const [slideIndex, setSlideIndex] = useState(0);
+  
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [dims, setDims] = useState({ width: 0, height: 0 });
+
+  const slide = slides[slideIndex];
+
+  useEffect(() => {
+    setMounted(true);
+    function onResize() { setDims({ width: window.innerWidth, height: window.innerHeight }); }
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    if (showConfetti) {
+      const timer = setTimeout(() => setShowConfetti(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [showConfetti]);
+
+  useEffect(() => {
+    function onKey(e) {
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [slideIndex]);
+
+  function prev() { setSlideIndex((i) => Math.max(0, i - 1)); }
+  function next() {
+    setSlideIndex((i) => {
+      if (i + 1 >= slides.length) { setShowConfetti(true); return i; }
+      return Math.min(slides.length - 1, i + 1);
+    });
+  }
+
+  return (
+    <div className="min-h-screen w-full bg-gradient-to-br from-red-50 via-white to-red-50 text-gray-900 flex flex-col relative" style={{ fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" }}>
+      {/* Confetti (triggered on last slide) */}
+      {mounted && showConfetti && (
         <div className="fixed inset-0 pointer-events-none grid place-items-center text-6xl animate-bounce">🎉</div>
       )}
 
@@ -215,7 +291,16 @@ const slides = [
                 )}
 
                 {/* Trainer-facing panels when Trainer Mode is ON */}
-                
+                {trainerMode && slide.trainerNotes && slide.trainerNotes.length > 0 && (
+                  <div className="p-4 rounded-2xl border bg-amber-50/60" style={{ borderColor: "#F3F4F6" }}>
+                    <div className="text-sm font-semibold mb-1">Trainer Notes (Slide {slideIndex + 1})</div>
+                    <ul className="list-disc pl-5 text-base md:text-lg space-y-1 font-bold">
+                      {slide.trainerNotes.map((note, i) => (
+                        <li key={i}>{note}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-3">
